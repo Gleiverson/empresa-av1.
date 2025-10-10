@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Sistema Empresa</title>
+  <meta charset="UTF-8">
+  <title>Empresa - Home</title>
 </head>
 <body>
-    <h1>Bem-vindo ao Sistema da Empresa</h1>
-    <p>Use os endpoints para acessar funcionários e departamentos.</p>
+  <h1>Bem-vindo ao Sistema da Empresa</h1>
+  <ul>
+    <li><a th:href="@{/departamentos}">Departamentos</a></li>
+    <li><a th:href="@{/funcionarios}">Funcionários</a></li>
+  </ul>
 </body>
 </html>
-v
