@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Departamento</title>
+</head>
+<body>
+  <h1 th:text="${departamento.id} != null ? 'Editar Departamento' : 'Novo Departamento'"></h1>
+  <form th:action="@{/departamentos/salvar}" th:object="${departamento}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <div>
+      <label>Nome:</label>
+      <input type="text" th:field="*{nome}" required />
+    </div>
+    <div>
+      <label>Localização:</label>
+      <input type="text" th:field="*{localizacao}" />
+    </div>
+    <div>
+      <button type="submit">Salvar</button>
+      <a th:href="@{/departamentos}">Cancelar</a>
+    </div>
+  </form>
+</body>
+</html>
 
